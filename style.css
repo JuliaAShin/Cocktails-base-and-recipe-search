@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: square;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --green: #06ff00;
+    --yellow: #ffea19;
+}
+
+.wrapper {
+   font-family: 'RocknRoll One', sans-serif;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1 0 0%;
+    background: #000;
+    color: #fff;
+}
+
+.column div:first-child {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.column div:last-child {
+    padding: 20px;
+}
+
+.left div:first-child {
+    background: var(--yellow);
+}
+
+.right div:first-child {
+    background: var(--green);
+}
+
+input {
+    border-radius: 3px;
+    border: 0;
+    outline: none;
+    margin-right: 10px;
+    height: 30px;
+    padding: 0 5px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+button {
+    border-radius: 12px;
+    border: 0;
+    padding: 5px 10px;
+    background: #000;
+    font-family: 'RocknRoll One', sans-serif;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 40%;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+}
+
+h1,
+h1+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: var(--yellow);
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.left ul {
+    padding: 5px;
+    padding-left: 25px;
+    border: 3px solid var(--yellow);
+    border-radius: 12px;
+}
+
+.right ul {
+    column-count: 2;
+    column-gap: 25px;
+    padding: 5px;
+    padding-left: 25px;
+    line-height: 200%;
+    border: 3px solid var(--green);
+    border-radius: 12px;
+}
+
+#recipe p:last-child {
+    border: 3px solid var(--green);
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.uncorrect-name {
+    border: 0 !important;
+}
+
+@media (max-width: 768px) {
+
+    input {
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .column>div:first-child {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .wrapper {
+        min-width: 300px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+}
+
